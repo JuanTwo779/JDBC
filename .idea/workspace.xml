@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="UI">
+    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="panels and table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MovieInfo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MovieInfo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MovieInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HotelManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MovieInfo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "375",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Juan Mangubat/IdeaProjects/Management/src/images",
@@ -51,6 +53,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Juan Mangubat\IdeaProjects\Management\src\images" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan Mangubat\IdeaProjects\Management\src\UI" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,7 +66,9 @@
       <option name="presentableId" value="Default" />
       <updated>1666102986526</updated>
       <workItem from="1666102988943" duration="3654000" />
-      <workItem from="1666154067629" duration="2207000" />
+      <workItem from="1666154067629" duration="2400000" />
+      <workItem from="1666185307057" duration="3000" />
+      <workItem from="1666185345859" duration="3613000" />
     </task>
     <task id="LOCAL-00001" summary="UI">
       <created>1666107185505</created>
@@ -70,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666107185505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="panels and table">
+      <created>1666156476567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666156476567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI" />
+    <MESSAGE value="panels and table" />
+    <option name="LAST_COMMIT_MESSAGE" value="panels and table" />
   </component>
 </project>
