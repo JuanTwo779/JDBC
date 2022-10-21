@@ -1,4 +1,4 @@
-import UI.MovieInfo;
+import UI.MovieInfo; //package containing UI
 
 import javax.swing.*;
 

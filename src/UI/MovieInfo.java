@@ -30,7 +30,8 @@ public class MovieInfo {
     private JPanel titlePanel;
     private JPanel buttonPanel;
     private JButton addBtn;
-    private JButton saveBtn;
+    private JButton editBtn;
+    private JButton deleteBtn;
 
     public MovieInfo(){
 
