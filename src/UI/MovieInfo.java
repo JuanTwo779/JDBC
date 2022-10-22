@@ -4,8 +4,10 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MovieInfo {
+public class MovieInfo implements ActionListener {
     private JPanel rootPanel;
     private JTextField movieTitleText;
     private JLabel movieTitleLbl;
@@ -20,9 +22,7 @@ public class MovieInfo {
     private JTextField ratingText;
     private JLabel countryLbl;
     private JTextField countryText;
-    private JRadioButton yesRadioBtn;
     private JLabel watchLbl;
-    private JRadioButton noRadioBtn;
     private JPanel dataPanel;
     private JPanel tablePanel;
     private JScrollPane tableScrollPane;
@@ -32,15 +32,24 @@ public class MovieInfo {
     private JButton addBtn;
     private JButton editBtn;
     private JButton deleteBtn;
+    private JRadioButton yesRadioButton;
+    private JRadioButton noRadioButton;
 
     public MovieInfo(){
 
         createTable();
+        buttonGroup();
     }
 
     public JPanel getRootPanel(){
 
         return rootPanel;
+    }
+
+    private void buttonGroup() {
+        ButtonGroup group = new ButtonGroup();
+        group.add(yesRadioButton);
+        group.add(noRadioButton);
     }
 
     private void createTable(){
@@ -67,5 +76,10 @@ public class MovieInfo {
         columns.getColumn(4).setCellRenderer(centerRender);
         columns.getColumn(5).setCellRenderer(centerRender);
         columns.getColumn(6).setCellRenderer(centerRender);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
