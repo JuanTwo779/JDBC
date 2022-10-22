@@ -1,5 +1,7 @@
 package UI;
 
+import java.sql.*;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -37,6 +39,7 @@ public class MovieInfo implements ActionListener {
 
     public MovieInfo(){
 
+        connect();
         createTable();
         buttonGroup();
     }
@@ -44,6 +47,23 @@ public class MovieInfo implements ActionListener {
     public JPanel getRootPanel(){
 
         return rootPanel;
+    }
+
+    //connection to DB
+    public void connect(){
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", "****", "****");
+            Statement statement = connection.createStatement();
+
+            //shows tuples in table on console
+            ResultSet resultSet = statement.executeQuery("select * from movies");
+            while(resultSet.next()){
+                System.out.println(resultSet.getString(2));
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     private void buttonGroup() {

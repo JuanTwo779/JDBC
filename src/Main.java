@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
+        //generate UI
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
