@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="radio button grouping + action listener set up">
+    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="connection to DB method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MovieInfo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,24 +33,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;375&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juan Mangubat/IdeaProjects/Management/JDBC/mysql-connector-j-8.0.31.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.packagesearch.PackageSearchGeneralConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "287",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Juan Mangubat/IdeaProjects/Management/JDBC/mysql-connector-j-8.0.31.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.packagesearch.PackageSearchGeneralConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Juan Mangubat\IdeaProjects\Management\src\images" />
@@ -72,7 +72,8 @@
       <workItem from="1666185307057" duration="3000" />
       <workItem from="1666185345859" duration="3814000" />
       <workItem from="1666338358975" duration="2582000" />
-      <workItem from="1666407030545" duration="2231000" />
+      <workItem from="1666407030545" duration="2450000" />
+      <workItem from="1666587863450" duration="8187000" />
     </task>
     <task id="LOCAL-00001" summary="UI">
       <created>1666107185505</created>
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666411377050</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="connection to DB method">
+      <created>1666413187248</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666413187248</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +139,7 @@
     <MESSAGE value="panels and table" />
     <MESSAGE value="edit and delete buttons" />
     <MESSAGE value="radio button grouping + action listener set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="radio button grouping + action listener set up" />
+    <MESSAGE value="connection to DB method" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection to DB method" />
   </component>
 </project>

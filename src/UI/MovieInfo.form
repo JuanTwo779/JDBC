@@ -6,7 +6,7 @@
       <xy x="20" y="20" width="1014" height="698"/>
     </constraints>
     <properties>
-      <background color="-1246721"/>
+      <background color="-1"/>
     </properties>
     <border type="none"/>
     <children>
@@ -20,7 +20,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="b095e" class="javax.swing.JLabel" binding="movieTitleLbl">
+          <component id="b095e" class="javax.swing.JLabel" binding="lblMovie">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -30,7 +30,7 @@
               <text value="Movie Title"/>
             </properties>
           </component>
-          <component id="70d7e" class="javax.swing.JTextField" binding="movieTitleText">
+          <component id="70d7e" class="javax.swing.JTextField" binding="txtMovie">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -39,11 +39,11 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-1246721"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="770d1" class="javax.swing.JTextField" binding="lastNameText">
+          <component id="770d1" class="javax.swing.JTextField" binding="txtYear">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -52,11 +52,11 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-1246721"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="6b72e" class="javax.swing.JLabel" binding="yearLbl">
+          <component id="6b72e" class="javax.swing.JLabel" binding="lblYear">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -66,7 +66,7 @@
               <text value="Year"/>
             </properties>
           </component>
-          <component id="2b44f" class="javax.swing.JLabel" binding="directorLbl">
+          <component id="2b44f" class="javax.swing.JLabel" binding="lblDirector">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -76,7 +76,7 @@
               <text value="Director"/>
             </properties>
           </component>
-          <component id="64a76" class="javax.swing.JLabel" binding="genreLbl">
+          <component id="64a76" class="javax.swing.JLabel" binding="lblGenre">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -86,7 +86,7 @@
               <text value="Genre"/>
             </properties>
           </component>
-          <component id="c68f3" class="javax.swing.JLabel" binding="ratingLbl">
+          <component id="c68f3" class="javax.swing.JLabel" binding="lblRating">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -96,7 +96,7 @@
               <text value="Rating"/>
             </properties>
           </component>
-          <component id="8de1d" class="javax.swing.JLabel" binding="countryLbl">
+          <component id="8de1d" class="javax.swing.JLabel" binding="lblCountry">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -106,7 +106,7 @@
               <text value="Country"/>
             </properties>
           </component>
-          <component id="914df" class="javax.swing.JLabel" binding="watchLbl">
+          <component id="914df" class="javax.swing.JLabel" binding="lblWatch">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -116,7 +116,7 @@
               <text value="Watch Status"/>
             </properties>
           </component>
-          <component id="e7d9f" class="javax.swing.JTextField" binding="directorText">
+          <component id="e7d9f" class="javax.swing.JTextField" binding="txtDirector">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -125,11 +125,11 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-1246721"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="d3e8c" class="javax.swing.JTextField" binding="genreText">
+          <component id="d3e8c" class="javax.swing.JTextField" binding="txtGenre">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -138,11 +138,11 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-1246721"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="4b9ab" class="javax.swing.JTextField" binding="ratingText">
+          <component id="4b9ab" class="javax.swing.JTextField" binding="txtRating">
             <constraints>
               <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -151,11 +151,11 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-1246721"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="ed1d6" class="javax.swing.JTextField" binding="countryText">
+          <component id="ed1d6" class="javax.swing.JTextField" binding="txtCountry">
             <constraints>
               <grid row="5" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -164,28 +164,21 @@
             <properties>
               <background color="-1246721"/>
               <font size="12"/>
-              <foreground color="-12166257"/>
+              <foreground color="-16777216"/>
               <text value=""/>
             </properties>
           </component>
-          <component id="252eb" class="javax.swing.JRadioButton" binding="yesRadioButton" default-binding="true">
+          <component id="aa52c" class="javax.swing.JTextField" binding="txtWatch">
             <constraints>
-              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
             </constraints>
             <properties>
-              <background color="-3025192"/>
+              <background color="-1246721"/>
+              <font size="12"/>
               <foreground color="-16777216"/>
-              <text value="Yes"/>
-            </properties>
-          </component>
-          <component id="7991e" class="javax.swing.JRadioButton" binding="noRadioButton" default-binding="true">
-            <constraints>
-              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-3025192"/>
-              <foreground color="-16777216"/>
-              <text value="No"/>
+              <text value=""/>
             </properties>
           </component>
         </children>
@@ -233,7 +226,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="16d04" class="javax.swing.JLabel" binding="titleLbl">
+          <component id="16d04" class="javax.swing.JLabel" binding="lblTitle">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
