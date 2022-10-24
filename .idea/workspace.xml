@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="add button method created">
+    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="GUI changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MovieInfo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
       <workItem from="1666185345859" duration="3814000" />
       <workItem from="1666338358975" duration="2582000" />
       <workItem from="1666407030545" duration="2450000" />
-      <workItem from="1666587863450" duration="8497000" />
+      <workItem from="1666587863450" duration="10208000" />
     </task>
     <task id="LOCAL-00001" summary="UI">
       <created>1666107185505</created>
@@ -122,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666600409163</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="GUI changes">
+      <created>1666600684413</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666600684413</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +156,7 @@
     <MESSAGE value="radio button grouping + action listener set up" />
     <MESSAGE value="connection to DB method" />
     <MESSAGE value="add button method created" />
-    <option name="LAST_COMMIT_MESSAGE" value="add button method created" />
+    <MESSAGE value="GUI changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI changes" />
   </component>
 </project>

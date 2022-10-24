@@ -79,18 +79,19 @@ public class MovieInfo  {
 
         showTable.setModel(new DefaultTableModel(
                 data,
-                new String[]{"Title", "Year", "Director", "Genre", "Rating", "Country", "Status"} //columns in table
+                new String[]{"ID", "Title", "Year", "Director",
+                        "Genre", "Rating", "Country", "Status"} //columns in table
         ));
 
         //fixes the width of the column
         TableColumnModel columns = showTable.getColumnModel();
-        columns.getColumn(0).setMinWidth(200);
+        columns.getColumn(0).setMinWidth(10);
 
         //centers the data
         DefaultTableCellRenderer centerRender = new DefaultTableCellRenderer();
         centerRender.setHorizontalAlignment(JLabel.CENTER);
-        columns.getColumn(1).setCellRenderer(centerRender);
-        columns.getColumn(4).setCellRenderer(centerRender);
+        columns.getColumn(0).setCellRenderer(centerRender);
+        columns.getColumn(2).setCellRenderer(centerRender);
         columns.getColumn(5).setCellRenderer(centerRender);
         columns.getColumn(6).setCellRenderer(centerRender);
     }
@@ -135,6 +136,7 @@ public class MovieInfo  {
                     txtWatch.setText("");
 
                 } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog( null, "Empty fields");
                     throw new RuntimeException(ex);
                 }
 
