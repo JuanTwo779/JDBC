@@ -1,6 +1,7 @@
 import UI.MovieInfo; //package containing UI
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
 
@@ -22,6 +23,7 @@ public class Main {
         frame.setContentPane(root);
         frame.pack();
         frame.setSize(1500,750);
+        frame.setMinimumSize(new Dimension(500,500));
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
