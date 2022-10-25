@@ -85,7 +85,12 @@ public class MovieInfo  {
 
         //fixes the width of the column
         TableColumnModel columns = showTable.getColumnModel();
-        columns.getColumn(0).setMinWidth(10);
+        columns.getColumn(0).setMaxWidth(40);
+        columns.getColumn(0).setMinWidth(30);
+        columns.getColumn(2).setMaxWidth(60);
+        columns.getColumn(2).setMinWidth(30);
+        columns.getColumn(5).setMaxWidth(60);
+        columns.getColumn(5).setMinWidth(30);
 
         //centers the data
         DefaultTableCellRenderer centerRender = new DefaultTableCellRenderer();
@@ -136,7 +141,7 @@ public class MovieInfo  {
                     txtWatch.setText("");
 
                 } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog( null, "Empty fields");
+                    JOptionPane.showMessageDialog( null, "Text fields cannot be empty");
                     throw new RuntimeException(ex);
                 }
 
