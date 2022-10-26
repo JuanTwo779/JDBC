@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class MovieInfo  {
     private JPanel rootPanel;
@@ -109,8 +110,17 @@ public class MovieInfo  {
 
             ResultSetMetaData rsmd = resultSet.getMetaData();
             numColumn = rsmd.getColumnCount();
-            DefaultTableModel DFT = (DefaultTableModel) showTable.getModel();
-            DFT.setRowCount(0);
+            DefaultTableModel sDFT = (DefaultTableModel) showTable.getModel();
+            sDFT.setRowCount(0);
+
+            while (resultSet.next()){ //first loop to go through the tuples
+                Vector v = new Vector();
+
+                for (int i = 0; i < numColumn; i++) { //second loop to go through columns
+
+                }
+
+            }
 
 
 

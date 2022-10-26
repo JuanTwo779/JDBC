@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="UI - panel sizing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MovieInfo.java" afterDir="false" />
-    </list>
+    <list default="true" id="611e4fff-9f20-4165-8f55-9fa707c3724a" name="Changes" comment="update table method set up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +71,7 @@
       <workItem from="1666407030545" duration="2450000" />
       <workItem from="1666587863450" duration="10260000" />
       <workItem from="1666701679492" duration="3107000" />
-      <workItem from="1666786773996" duration="374000" />
+      <workItem from="1666786773996" duration="1164000" />
     </task>
     <task id="LOCAL-00001" summary="UI">
       <created>1666107185505</created>
@@ -153,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666704561547</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update table method set up">
+      <created>1666787339891</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666787339891</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +183,7 @@
     <MESSAGE value="add button method created" />
     <MESSAGE value="GUI changes" />
     <MESSAGE value="UI - panel sizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI - panel sizing" />
+    <MESSAGE value="update table method set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="update table method set up" />
   </component>
 </project>
