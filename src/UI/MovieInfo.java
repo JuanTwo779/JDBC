@@ -87,9 +87,9 @@ public class MovieInfo  {
         TableColumnModel columns = showTable.getColumnModel();
         columns.getColumn(0).setMaxWidth(40);
         columns.getColumn(0).setMinWidth(30);
-        columns.getColumn(2).setMaxWidth(60);
+        columns.getColumn(2).setMaxWidth(50);
         columns.getColumn(2).setMinWidth(30);
-        columns.getColumn(5).setMaxWidth(60);
+        columns.getColumn(5).setMaxWidth(50);
         columns.getColumn(5).setMinWidth(30);
 
         //centers the data
@@ -99,6 +99,24 @@ public class MovieInfo  {
         columns.getColumn(2).setCellRenderer(centerRender);
         columns.getColumn(5).setCellRenderer(centerRender);
         columns.getColumn(6).setCellRenderer(centerRender);
+    }
+
+    private void tableUpdate(){
+        int numColumn;
+        try {
+            pst = con.prepareStatement("select * from movies");
+            ResultSet resultSet = pst.executeQuery();
+
+            ResultSetMetaData rsmd = resultSet.getMetaData();
+            numColumn = rsmd.getColumnCount();
+            DefaultTableModel DFT = (DefaultTableModel) showTable.getModel();
+            DFT.setRowCount(0);
+
+
+
+        }catch(Exception e){
+
+        }
     }
 
     private void addBtnAction()
