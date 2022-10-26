@@ -58,7 +58,7 @@ public class MovieInfo  {
     //connection to DB
     public void connect(){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", "root", "Hansosjsneia-90");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", "****", "****");
 
             //shows tuples in table on console
 //            ResultSet resultSet = statement.executeQuery("select * from movies");
