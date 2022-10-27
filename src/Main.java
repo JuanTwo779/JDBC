@@ -1,4 +1,4 @@
-import UI.MovieInfo; //package containing UI
+import UI.MovieInfo; //package containing UI class
 
 import javax.swing.*;
 import java.awt.*;
