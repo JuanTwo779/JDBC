@@ -50,6 +50,7 @@ public class MovieInfo  {
         connect();
         createTable();
         addBtnAction();
+        editBtnAction();
 
         updateTable();
         selectTable();
@@ -132,6 +133,26 @@ public class MovieInfo  {
         }
     }
 
+    private void selectTable(){
+        showTable.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                DefaultTableModel model = (DefaultTableModel) showTable.getModel();
+                int selectedRow = showTable.getSelectedRow();
+
+                int id = Integer.parseInt((model.getValueAt(selectedRow, 0).toString()));
+                txtMovie.setText(model.getValueAt(selectedRow, 1).toString());
+                txtYear.setText(model.getValueAt(selectedRow, 2).toString());
+                txtDirector.setText(model.getValueAt(selectedRow, 3).toString());
+                txtGenre.setText(model.getValueAt(selectedRow, 4).toString());
+                txtRating.setText(model.getValueAt(selectedRow, 5).toString());
+                txtCountry.setText(model.getValueAt(selectedRow, 6).toString());
+                txtWatch.setText(model.getValueAt(selectedRow, 7).toString());
+            }
+        });
+    }
+
     private void addBtnAction()
     {
         addBtn.addActionListener(new ActionListener() {
@@ -181,31 +202,57 @@ public class MovieInfo  {
         });
     }
 
-    private void selectTable(){
-        showTable.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
 
-                DefaultTableModel model = (DefaultTableModel) showTable.getModel();
-                int selectedRow = showTable.getSelectedRow();
-
-                txtMovie.setText(model.getValueAt(selectedRow, 1).toString());
-                txtYear.setText(model.getValueAt(selectedRow, 2).toString());
-                txtDirector.setText(model.getValueAt(selectedRow, 3).toString());
-                txtGenre.setText(model.getValueAt(selectedRow, 4).toString());
-                txtRating.setText(model.getValueAt(selectedRow, 5).toString());
-                txtCountry.setText(model.getValueAt(selectedRow, 6).toString());
-                txtWatch.setText(model.getValueAt(selectedRow, 7).toString());
-            }
-        });
-    }
 
     private void editBtnAction()
     {
-        addBtn.addActionListener(new ActionListener() {
+        editBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Hello");
+                DefaultTableModel model = (DefaultTableModel) showTable.getModel();
+                int selectedRow = showTable.getSelectedRow();
+
+                int id = Integer.parseInt((model.getValueAt(selectedRow, 0).toString()));
+
+                String title, year, director, genre, rating, country, status;
+                title = txtMovie.getText();
+                year = txtYear.getText();
+                director = txtDirector.getText();
+                genre = txtGenre.getText();
+                rating = txtRating.getText();
+                country = txtCountry.getText();
+                status = txtWatch.getText();
+
+                try {
+                    pst = con.prepareStatement(
+                            "update movies set movie_title=?, movie_year=?, movie_dir=?, movie_gen=?, " +
+                                    "movie_rat=?, movie_country=?, movie_status=? where movie_id=?");
+                    pst.setString(1,title);
+                    pst.setString(2,year);
+                    pst.setString(3,director);
+                    pst.setString(4,genre);
+                    pst.setString(5,rating);
+                    pst.setString(6,country);
+                    pst.setString(7,status);
+
+                    pst.setInt(8,id); //get the ID to change paramaters
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog( null, "Movie edited");
+                    updateTable();
+
+                    txtMovie.setText("");
+                    txtYear.setText("");
+                    txtDirector.setText("");
+                    txtGenre.setText("");
+                    txtRating.setText("");
+                    txtCountry.setText("");
+                    txtWatch.setText("");
+
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog( null, "Select a movie to edit");
+                    throw new RuntimeException(ex);
+                }
 
             }
         });
