@@ -59,8 +59,13 @@ public class MovieInfo  {
     //connection to DB
     public void connect(){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", ");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", "root", "password");
 
+            //shows tuples in table on console
+//            ResultSet resultSet = statement.executeQuery("select * from movies");
+//            while(resultSet.next()){
+//                System.out.println(resultSet.getString(2));
+//            }
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -69,7 +74,10 @@ public class MovieInfo  {
     private void createTable(){
 
         data = new Object[][]{};
+
 //        {"The Dark Knight", 2008, "Bruce Wayne", "Dark", 9.0, "USA", "I"},
+//        {"Star Wars: Phantom Menace", 2005, "Wayne", "Sci-fi", 9.2, "USA", "I"},
+//        {"Inception", 2015, "Juan", "Thriller", 10, "USA", 0}
 
         showTable.setModel(new DefaultTableModel(
                 data,
@@ -109,7 +117,7 @@ public class MovieInfo  {
             while (resultSet.next()){ //first loop to go through the tuples
                 Vector v = new Vector();
 
-                for (int i = 0; i < numColumn; i++) { //second loop to go through columns
+                for (int i = 1; i < numColumn; i++) { //second loop to go through columns
                     v.add(resultSet.getString("movie_id"));
                     v.add(resultSet.getString("movie_title"));
                     v.add(resultSet.getString("movie_year"));
@@ -118,11 +126,10 @@ public class MovieInfo  {
                     v.add(resultSet.getString("movie_rat"));
                     v.add(resultSet.getString("movie_country"));
                     v.add(resultSet.getString("movie_status"));
+
                 }
-                sDFT.addRow(v); //adds each element (seperated by vectors) for each individual tuple
+                sDFT.addRow(v);
             }
-
-
         }catch(Exception e){
 
         }
@@ -168,8 +175,6 @@ public class MovieInfo  {
                     txtCountry.setText("");
                     txtWatch.setText("");
 
-                    txtMovie.requestFocus();
-
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog( null, "Text fields cannot be empty");
                     throw new RuntimeException(ex);
@@ -181,7 +186,7 @@ public class MovieInfo  {
 
     private void editBtnAction()
     {
-        editBtn.addActionListener(new ActionListener() {
+        addBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Hello");
@@ -192,7 +197,7 @@ public class MovieInfo  {
 
     private void deleteBtnAction()
     {
-        deleteBtn.addActionListener(new ActionListener() {
+        addBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Hello");
