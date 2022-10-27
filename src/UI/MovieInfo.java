@@ -1,5 +1,7 @@
 package UI;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.*;
 
 import javax.swing.*;
@@ -48,7 +50,11 @@ public class MovieInfo  {
         connect();
         createTable();
         addBtnAction();
-        tableUpdate();
+
+        updateTable();
+        selectTable();
+
+
     }
 
     public JPanel getRootPanel(){
@@ -60,12 +66,6 @@ public class MovieInfo  {
     public void connect(){
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/movie_data", "root", "password");
-
-            //shows tuples in table on console
-//            ResultSet resultSet = statement.executeQuery("select * from movies");
-//            while(resultSet.next()){
-//                System.out.println(resultSet.getString(2));
-//            }
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -76,8 +76,6 @@ public class MovieInfo  {
         data = new Object[][]{};
 
 //        {"The Dark Knight", 2008, "Bruce Wayne", "Dark", 9.0, "USA", "I"},
-//        {"Star Wars: Phantom Menace", 2005, "Wayne", "Sci-fi", 9.2, "USA", "I"},
-//        {"Inception", 2015, "Juan", "Thriller", 10, "USA", 0}
 
         showTable.setModel(new DefaultTableModel(
                 data,
@@ -103,7 +101,7 @@ public class MovieInfo  {
         columns.getColumn(6).setCellRenderer(centerRender);
     }
 
-    private void tableUpdate(){
+    private void updateTable(){
         int numColumn;
         try {
             pst = con.prepareStatement("select * from movies");
@@ -126,12 +124,11 @@ public class MovieInfo  {
                     v.add(resultSet.getString("movie_rat"));
                     v.add(resultSet.getString("movie_country"));
                     v.add(resultSet.getString("movie_status"));
-
                 }
                 sDFT.addRow(v);
             }
         }catch(Exception e){
-
+            throw new RuntimeException(e);
         }
     }
 
@@ -165,7 +162,7 @@ public class MovieInfo  {
 
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog( null, "Movie added");
-                    tableUpdate();
+                    updateTable();
 
                     txtMovie.setText("");
                     txtYear.setText("");
@@ -180,6 +177,25 @@ public class MovieInfo  {
                     throw new RuntimeException(ex);
                 }
 
+            }
+        });
+    }
+
+    private void selectTable(){
+        showTable.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                DefaultTableModel model = (DefaultTableModel) showTable.getModel();
+                int selectedRow = showTable.getSelectedRow();
+
+                txtMovie.setText(model.getValueAt(selectedRow, 1).toString());
+                txtYear.setText(model.getValueAt(selectedRow, 2).toString());
+                txtDirector.setText(model.getValueAt(selectedRow, 3).toString());
+                txtGenre.setText(model.getValueAt(selectedRow, 4).toString());
+                txtRating.setText(model.getValueAt(selectedRow, 5).toString());
+                txtCountry.setText(model.getValueAt(selectedRow, 6).toString());
+                txtWatch.setText(model.getValueAt(selectedRow, 7).toString());
             }
         });
     }
