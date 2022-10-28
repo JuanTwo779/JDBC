@@ -51,6 +51,7 @@ public class MovieInfo  {
         createTable();
         addBtnAction();
         editBtnAction();
+        deleteBtnAction();
 
         updateTable();
         selectTable();
@@ -202,28 +203,27 @@ public class MovieInfo  {
         });
     }
 
-
-
     private void editBtnAction()
     {
         editBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DefaultTableModel model = (DefaultTableModel) showTable.getModel();
-                int selectedRow = showTable.getSelectedRow();
 
-                int id = Integer.parseInt((model.getValueAt(selectedRow, 0).toString()));
-
-                String title, year, director, genre, rating, country, status;
-                title = txtMovie.getText();
-                year = txtYear.getText();
-                director = txtDirector.getText();
-                genre = txtGenre.getText();
-                rating = txtRating.getText();
-                country = txtCountry.getText();
-                status = txtWatch.getText();
 
                 try {
+                    DefaultTableModel model = (DefaultTableModel) showTable.getModel();
+                    int selectedRow = showTable.getSelectedRow();
+                    int id = Integer.parseInt((model.getValueAt(selectedRow, 0).toString()));
+
+                    String title, year, director, genre, rating, country, status;
+                    title = txtMovie.getText();
+                    year = txtYear.getText();
+                    director = txtDirector.getText();
+                    genre = txtGenre.getText();
+                    rating = txtRating.getText();
+                    country = txtCountry.getText();
+                    status = txtWatch.getText();
+
                     pst = con.prepareStatement(
                             "update movies set movie_title=?, movie_year=?, movie_dir=?, movie_gen=?, " +
                                     "movie_rat=?, movie_country=?, movie_status=? where movie_id=?");
@@ -235,7 +235,7 @@ public class MovieInfo  {
                     pst.setString(6,country);
                     pst.setString(7,status);
 
-                    pst.setInt(8,id); //get the ID to change paramaters
+                    pst.setInt(8,id); //get the ID to change parameters
 
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog( null, "Movie edited");
@@ -249,22 +249,42 @@ public class MovieInfo  {
                     txtCountry.setText("");
                     txtWatch.setText("");
 
-                } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog( null, "Select a movie to edit");
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog( null, "Select a movie from the table to edit");
                     throw new RuntimeException(ex);
                 }
-
             }
         });
     }
 
     private void deleteBtnAction()
     {
-        addBtn.addActionListener(new ActionListener() {
+        deleteBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Hello");
+                try {
+                    DefaultTableModel model = (DefaultTableModel) showTable.getModel();
+                    int selectedRow = showTable.getSelectedRow();
+                    int id = Integer.parseInt((model.getValueAt(selectedRow, 0).toString()));
 
+                    pst = con.prepareStatement("delete from movies where movie_id=?");
+                    pst.setInt(1,id);
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog( null, "Movie deleted from table");
+                    updateTable();
+
+                    txtMovie.setText("");
+                    txtYear.setText("");
+                    txtDirector.setText("");
+                    txtGenre.setText("");
+                    txtRating.setText("");
+                    txtCountry.setText("");
+                    txtWatch.setText("");
+                }
+                catch(Exception exe){
+                    JOptionPane.showMessageDialog( null, "Select a movie from table to delete");
+                    throw new RuntimeException(exe);
+                }
             }
         });
     }
